@@ -3,58 +3,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Digital Solutions | Premium Canadian Agency</title>
+    <title>Elite Digital Solutions | Canadian Premium Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
-        body { background: #050505; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 30px; }
-        .gold-text { background: linear-gradient(90deg, #c5a059, #f2d06b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn-elite { background: linear-gradient(90deg, #c5a059, #f2d06b); color: #000; font-weight: 800; border-radius: 50px; transition: 0.4s; cursor: pointer; }
-        .btn-elite:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3); }
+        body { margin: 0; background: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        #canvas-container { position: fixed; top: 0; left: 0; z-index: -1; pointer-events: none; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 40px; transition: 0.5s; }
+        .glass:hover { transform: scale(1.02); border: 1px solid rgba(197, 160, 89, 0.4); }
+        .gold-glow { background: linear-gradient(90deg, #c5a059, #f2d06b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="p-4 md:p-12">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto py-8">
-        <h1 class="text-3xl font-black gold-text tracking-tighter">ELITE DIGITAL SOLUTIONS</h1>
-        <a href="https://wa.me/16722203696" class="btn-elite px-8 py-3 text-xs uppercase tracking-widest">Book Expert</a>
+<body>
+    <div id="canvas-container"></div>
+    <nav class="relative z-10 flex justify-between items-center max-w-7xl mx-auto p-10">
+        <h1 class="text-2xl font-black gold-glow uppercase">ELITE DIGITAL SOLUTIONS</h1>
+        <a href="https://wa.me/16722203696" class="bg-white text-black px-8 py-3 rounded-full font-bold text-xs uppercase hover:scale-110 transition shadow-[0_0_20px_rgba(255,255,255,0.3)]">Connect</a>
     </nav>
-
-    <main class="max-w-5xl mx-auto text-center py-20">
-        <h2 class="text-6xl md:text-8xl font-black mb-8 leading-tight italic">Result Driven. <br><span class="gold-text">On Time Quality.</span></h2>
-        <p class="text-gray-500 text-xl max-w-2xl mx-auto mb-16 italic">"Expert Tech Solutions for US/UK/Canada Markets. High-End Agency Standards."</p>
-        
-        <div class="glass p-10 text-left mb-24">
-            <h3 class="text-3xl font-bold mb-4 gold-text">Strategic Session</h3>
-            <p class="text-gray-400 mb-8 text-sm italic">*Policy: 25-minute buffer between meetings. Weekends: CLOSED.*</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="glass p-5 text-center border-zinc-800 hover:bg-zinc-800 transition cursor-pointer">09:00 AM</div>
-                <div class="glass p-5 text-center border-zinc-800 hover:bg-zinc-800 transition cursor-pointer">09:55 AM</div>
-                <div class="glass p-5 text-center border-zinc-800 hover:bg-zinc-800 transition cursor-pointer">10:50 AM</div>
-                <div class="glass p-5 text-center border-zinc-800 hover:bg-zinc-800 transition cursor-pointer">11:45 AM</div>
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 text-left">
+    <main class="relative z-10 text-center py-20 px-6">
+        <h2 class="text-6xl md:text-9xl font-black mb-6 tracking-tighter">FUTURE <br> <span class="gold-glow">IS ELITE.</span></h2>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto mb-16 italic font-light">"Premium 3D Architectures & AI Systems. Expert Quality, On-Time."</p>
+        <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
             <div class="glass p-8">
-                <span class="text-yellow-600 text-xs font-bold uppercase tracking-widest">Case Study</span>
-                <h4 class="text-xl font-bold mt-2">Scaling E-commerce with AI Automation</h4>
-                <p class="text-gray-500 mt-4 text-sm">How we helped a Canadian brand hit $100k/mo using Gemini-powered systems...</p>
+                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=500" class="rounded-3xl mb-6 opacity-40 h-40 w-full object-cover">
+                <h4 class="text-xl font-bold mb-2">3D Experience</h4>
+                <p class="text-gray-500 text-sm">Immersive UX designed to convert high-ticket clients.</p>
             </div>
             <div class="glass p-8">
-                <span class="text-yellow-600 text-xs font-bold uppercase tracking-widest">Expert Opinion</span>
-                <h4 class="text-xl font-bold mt-2">Why 25-min Buffer Matters</h4>
-                <p class="text-gray-500 mt-4 text-sm">Quality takes time. Our agency standards for high-ticket US clients.</p>
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=500" class="rounded-3xl mb-6 opacity-40 h-40 w-full object-cover">
+                <h4 class="text-xl font-bold mb-2">AI Systems</h4>
+                <p class="text-gray-500 text-sm">Custom automation for US/UK business workflows.</p>
+            </div>
+            <div class="glass p-8 text-left">
+                <h3 class="text-xl font-bold mb-4 gold-glow">Strategic Session</h3>
+                <p class="text-xs text-gray-500 mb-6 italic">*25-min buffer policy*</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="glass p-3 text-xs hover:bg-white hover:text-black">10:00 AM</button>
+                    <button class="glass p-3 text-xs hover:bg-white hover:text-black">10:55 AM</button>
+                </div>
             </div>
         </div>
     </main>
-
-    <footer class="text-center py-20 opacity-40 text-xs tracking-widest uppercase">
-        &copy; 2026 Elite Digital Solutions | Global Payments: SadaPay, Wise, Remitly
-    </footer>
-
-    <a href="https://wa.me/16722203696" class="fixed bottom-10 right-10 bg-green-600 p-6 rounded-full shadow-2xl z-50">
-        <i class="fab fa-whatsapp text-4xl text-white"></i>
-    </a>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+        const geometry = new THREE.BufferGeometry();
+        const points = [];
+        for (let i = 0; i < 6000; i++) {
+            points.push(THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000));
+        }
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
+        const particles = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x444444, size: 2 }));
+        scene.add(particles);
+        camera.position.z = 1000;
+        function animate() {
+            requestAnimationFrame(animate);
+            particles.rotation.y += 0.0005;
+            particles.rotation.x += 0.0002;
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
 </body>
 </html>
