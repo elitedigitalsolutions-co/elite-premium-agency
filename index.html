@@ -3,16 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Digital Solutions | Next-Gen Agency</title>
+    <title>Elite Digital Solutions | Premium Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { margin: 0; background: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        #canvas-container { position: fixed; top: 0; left: 0; z-index: -1; pointer-events: none; opacity: 0.6; }
-        .glass { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 40px; transition: 0.6s ease; }
-        .glass:hover { transform: scale(1.02); border: 1px solid rgba(242, 208, 107, 0.3); box-shadow: 0 0 50px rgba(0,0,0,1); }
+        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        #canvas-container { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.5; }
+        .glass { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 30px; transition: 0.5s; }
+        .glass:hover { transform: scale(1.02); border-color: rgba(242, 208, 107, 0.4); }
         .gold-glow { background: linear-gradient(90deg, #c5a059, #f2d06b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; opacity: 0.3; }
+        .bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; opacity: 0.2; }
     </style>
 </head>
 <body>
@@ -23,42 +24,65 @@
             <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-loops-blue-and-purple-colors-32617-large.mp4" type="video/mp4">
         </video>
         <nav class="absolute top-0 w-full max-w-7xl flex justify-between items-center p-10">
-            <h1 class="text-3xl font-black gold-glow tracking-tighter uppercase">ELITE DIGITAL SOLUTIONS</h1>
-            <a href="https://wa.me/16722203696" class="bg-white text-black px-8 py-3 rounded-full font-bold text-xs uppercase hover:bg-gold-glow transition">Direct Line</a>
+            <h1 class="text-2xl font-black gold-glow uppercase">ELITE DIGITAL SOLUTIONS</h1>
+            <a href="#booking" class="bg-white text-black px-8 py-3 rounded-full font-bold text-xs uppercase hover:bg-[#f2d06b] transition">Book Now</a>
         </nav>
         <h2 class="text-7xl md:text-[9rem] font-black leading-none mb-6 tracking-tighter">ELITE <br> <span class="gold-glow">ONLY.</span></h2>
-        <p class="text-gray-400 text-lg md:text-xl max-w-xl italic font-light italic">"No flat designs. Only 3D AI Architectures & High-Ticket Systems."</p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-xl italic font-light italic">"Premium 3D Architectures & High-Ticket AI Systems."</p>
+        <a href="#services" class="mt-10 animate-bounce text-gray-500"><i class="fas fa-chevron-down text-2xl"></i></a>
     </header>
 
-    <section class="max-w-7xl mx-auto py-32 px-6 grid md:grid-cols-2 gap-12">
-        <div class="glass overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200" class="w-full h-80 object-cover opacity-60 group-hover:scale-110 transition duration-700">
-            <div class="p-10">
-                <h3 class="text-2xl font-bold mb-4">3D Cloud Systems</h3>
-                <p class="text-gray-500 text-sm">Interactive 3D dashbaords for North American logistics firms.</p>
+    <section id="services" class="max-w-7xl mx-auto py-32 px-6">
+        <h3 class="text-4xl font-bold mb-20 gold-glow tracking-tighter uppercase">Agency Services</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass p-10">
+                <i class="fas fa-robot text-4xl mb-6 gold-glow"></i>
+                <h4 class="text-xl font-bold mb-4">AI Automation</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Custom LLM agents & business workflow automation for US/UK enterprises.</p>
             </div>
-        </div>
-        <div class="glass overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200" class="w-full h-80 object-cover opacity-60 group-hover:scale-110 transition duration-700">
-            <div class="p-10">
-                <h3 class="text-2xl font-bold mb-4">AI Business Units</h3>
-                <p class="text-gray-500 text-sm">Automated sales funnels using custom Gemini LLM integrations.</p>
+            <div class="glass p-10">
+                <i class="fas fa-cubes text-4xl mb-6 gold-glow"></i>
+                <h4 class="text-xl font-bold mb-4">3D Web Systems</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Interactive Three.js environments that convert leads into clients.</p>
+            </div>
+            <div class="glass p-10">
+                <i class="fas fa-code text-4xl mb-6 gold-glow"></i>
+                <h4 class="text-xl font-bold mb-4">Full-Stack Scale</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">High-performance Next.js architectures optimized for massive scaling.</p>
             </div>
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto pb-40 px-6 text-center">
-        <div class="glass p-16 border-zinc-800">
-            <h3 class="text-3xl font-bold mb-10 gold-glow">Schedule Your session</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <button class="glass p-5 text-sm hover:bg-white hover:text-black">09:00 AM</button>
-                <button class="glass p-5 text-sm hover:bg-white hover:text-black">10:55 AM</button>
-                <button class="glass p-5 text-sm hover:bg-white hover:text-black">11:50 AM</button>
-                <button class="glass p-5 text-sm hover:bg-white hover:text-black">12:45 PM</button>
+    <section id="portfolio" class="max-w-7xl mx-auto py-20 px-6">
+        <h3 class="text-4xl font-bold mb-20 text-right gold-glow tracking-tighter uppercase">Our Showcase</h3>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="glass overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1000" class="w-full h-80 object-cover opacity-60">
+                <div class="p-8"><h5 class="font-bold text-lg">AI E-Commerce Engine</h5></div>
             </div>
-            <p class="mt-10 text-[10px] uppercase tracking-widest text-zinc-500">25-min buffer policy • based in canada</p>
+            <div class="glass overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000" class="w-full h-80 object-cover opacity-60">
+                <div class="p-8"><h5 class="font-bold text-lg">Fintech 3D Dashboard</h5></div>
+            </div>
         </div>
     </section>
+
+    <section id="booking" class="max-w-4xl mx-auto py-32 px-6 text-center">
+        <div class="glass p-16">
+            <h3 class="text-3xl font-bold mb-4 gold-glow">Strategic Appointment</h3>
+            <p class="text-gray-500 mb-12 text-sm italic">*25-minute buffer between client sessions.*</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <button class="glass p-4 text-xs font-bold hover:bg-white hover:text-black transition">10:00 AM</button>
+                <button class="glass p-4 text-xs font-bold hover:bg-white hover:text-black transition">10:55 AM</button>
+                <button class="glass p-4 text-xs font-bold hover:bg-white hover:text-black transition">11:50 AM</button>
+                <button class="glass p-4 text-xs font-bold hover:bg-white hover:text-black transition">12:45 PM</button>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/16722203696" class="fixed bottom-10 right-10 bg-green-600 p-6 rounded-full shadow-[0_0_30px_rgba(34,197,94,0.4)] z-50 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-4xl text-white"></i>
+    </a>
 
     <script>
         const scene = new THREE.Scene();
@@ -68,18 +92,12 @@
         document.getElementById('canvas-container').appendChild(renderer.domElement);
         const geometry = new THREE.BufferGeometry();
         const points = [];
-        for (let i = 0; i < 7000; i++) {
-            points.push(THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000));
-        }
+        for (let i = 0; i < 7000; i++) { points.push(THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000)); }
         geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
         const particles = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x888888, size: 1 }));
         scene.add(particles);
         camera.position.z = 1000;
-        function animate() {
-            requestAnimationFrame(animate);
-            particles.rotation.y += 0.0004;
-            renderer.render(scene, camera);
-        }
+        function animate() { requestAnimationFrame(animate); particles.rotation.y += 0.0004; renderer.render(scene, camera); }
         animate();
     </script>
 </body>
