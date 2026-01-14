@@ -3,94 +3,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Digital Solutions | Global Tech Architecture</title>
+    <title>Elite Digital Solutions | Canadian Premium Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;900&display=swap');
-        body { background: #050505; color: #fff; font-family: 'Outfit', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
-        #canvas-container { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.3; pointer-events: none; }
-        .glass-bento { background: rgba(255, 255, 255, 0.015); backdrop-filter: blur(40px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 32px; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
-        .glass-bento:hover { background: rgba(255, 255, 255, 0.03); border-color: rgba(197, 160, 89, 0.3); transform: translateY(-10px); }
-        .gold-gradient { background: linear-gradient(135deg, #c5a059 0%, #f2d06b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .premium-btn { background: linear-gradient(135deg, #c5a059 0%, #f2d06b 100%); color: #000; font-weight: 800; border-radius: 100px; transition: 0.4s; }
-        .premium-btn:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(197, 160, 89, 0.4); }
+        body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+        #canvas-container { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.4; }
+        .glass { background: rgba(255, 255, 255, 0.015); backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 30px; transition: 0.5s; }
+        .glass:hover { transform: scale(1.02); border-color: rgba(197, 160, 89, 0.4); }
+        .gold-glow { background: linear-gradient(90deg, #c5a059, #f2d06b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
 <body>
     <div id="canvas-container"></div>
-    
-    <nav class="fixed top-8 w-full z-50 px-6">
-        <div class="max-w-5xl mx-auto glass-bento px-8 py-4 flex justify-between items-center border-white/10">
-            <h1 class="text-xl font-black gold-gradient tracking-tighter uppercase">Elite Digital</h1>
-            <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-zinc-500 font-bold">
-                <a href="#work" class="hover:text-white transition">Portfolio</a>
-                <a href="#services" class="hover:text-white transition">Agency</a>
-                <a href="#booking" class="hover:text-white transition">Contact</a>
-            </div>
-            <a href="https://wa.me/16722203696" class="text-[10px] font-bold uppercase tracking-widest bg-white text-black px-5 py-2 rounded-full hover:bg-gold-gradient transition">Inquiry</a>
-        </div>
+    <nav class="fixed top-0 w-full z-50 p-10 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/5">
+        <h1 class="text-2xl font-black gold-glow uppercase tracking-tighter">ELITE DIGITAL</h1>
+        <a href="https://wa.me/16722203696" class="bg-white text-black px-8 py-3 rounded-full font-bold text-xs uppercase hover:scale-110 transition shadow-2xl">Connect</a>
     </nav>
 
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
-        <div class="inline-block px-4 py-1 border border-zinc-800 rounded-full text-[9px] uppercase tracking-[0.5em] mb-12 text-zinc-500 animate-pulse">Based in Canada • Serving Global Markets</div>
-        <h2 class="text-7xl md:text-[11rem] font-black leading-none tracking-tighter mb-8">ELITE <br> <span class="gold-gradient italic">STUDIO.</span></h2>
-        <p class="text-zinc-500 text-lg md:text-xl max-w-2xl mb-16 font-light leading-relaxed">Designing the future of North American tech with AI-first architectures and immersive 3D digital environments.</p>
-        <a href="#work" class="premium-btn px-12 py-5 text-xs uppercase tracking-[0.2em]">Explore Our Architecture</a>
-    </section>
+    <main class="relative z-10 pt-40 px-6">
+        <section class="text-center mb-32">
+            <h2 class="text-7xl md:text-[10rem] font-black leading-none mb-6 tracking-tighter uppercase">ELITE <br> <span class="gold-glow">AGENCY.</span></h2>
+            <p class="text-zinc-500 text-xl max-w-2xl mx-auto italic font-light italic">"Premium 3D AI Architectures & High-Ticket Systems. Automated in Canada."</p>
+        </section>
 
-    <section id="services" class="max-w-7xl mx-auto py-32 px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-bento p-12 md:col-span-2">
-                <span class="gold-gradient text-xs font-bold uppercase tracking-widest">01 / Service</span>
-                <h3 class="text-4xl font-bold mt-6 mb-8">AI & Machine Intelligence</h3>
-                <p class="text-zinc-500 leading-relaxed max-w-md">We integrate proprietary Gemini-powered systems into business flows, reducing overhead by 60% for enterprise clients.</p>
-            </div>
-            <div class="glass-bento p-12">
-                <div class="text-4xl mb-6">🌐</div>
-                <h3 class="text-xl font-bold mb-4">Web3 & 3D</h3>
-                <p class="text-zinc-500 text-sm">Interactive WebGL environments built for high-conversion engagement.</p>
-            </div>
-            <div class="glass-bento p-12">
-                <div class="text-4xl mb-6">⚡</div>
-                <h3 class="text-xl font-bold mb-4">Next.js Scale</h3>
-                <p class="text-zinc-500 text-sm">Military-grade performance with sub-second load times.</p>
-            </div>
-            <div class="glass-bento p-12 md:col-span-2 flex flex-col justify-between">
-                <div>
-                    <span class="gold-gradient text-xs font-bold uppercase tracking-widest">02 / Portfolio</span>
-                    <h3 class="text-4xl font-bold mt-6">Crafting Results.</h3>
-                </div>
-                <div class="flex gap-4 mt-8">
-                    <div class="w-12 h-12 rounded-full border border-zinc-800 flex items-center justify-center">→</div>
-                    <p class="text-zinc-600 text-sm self-center italic">View 50+ Global Success Stories</p>
-                </div>
+        <div id="booking" class="max-w-4xl mx-auto glass p-12 text-center mb-40">
+            <h3 class="text-3xl font-bold mb-4 gold-glow">Strategic Strategy Session</h3>
+            <p class="text-xs text-zinc-500 mb-12 uppercase tracking-widest italic">*25-min buffer policy active*</p>
+            <div id="slots" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <button onclick="book('10:00 AM')" class="glass p-5 text-sm font-bold hover:bg-white hover:text-black transition">10:00 AM</button>
+                <button onclick="book('10:55 AM')" class="glass p-5 text-sm font-bold hover:bg-white hover:text-black transition">10:55 AM</button>
+                <button onclick="book('11:50 AM')" class="glass p-5 text-sm font-bold hover:bg-white hover:text-black transition">11:50 AM</button>
+                <button onclick="book('12:45 PM')" class="glass p-5 text-sm font-bold hover:bg-white hover:text-black transition">12:45 PM</button>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section id="booking" class="max-w-4xl mx-auto py-32 px-6">
-        <div class="text-center mb-20">
-            <h3 class="text-5xl font-bold tracking-tighter mb-4">Ready to Scale?</h3>
-            <p class="text-zinc-500">Secure a private strategy session below.</p>
-        </div>
-        <div class="glass-bento p-12 border-white/5">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <button class="glass-bento p-6 text-[10px] font-bold tracking-widest hover:bg-white hover:text-black transition">10:00 AM</button>
-                <button class="glass-bento p-6 text-[10px] font-bold tracking-widest hover:bg-white hover:text-black transition">10:55 AM</button>
-                <button class="glass-bento p-6 text-[10px] font-bold tracking-widest hover:bg-white hover:text-black transition">11:50 AM</button>
-                <button class="glass-bento p-6 text-[10px] font-bold tracking-widest hover:bg-white hover:text-black transition">12:45 PM</button>
-            </div>
-            <p class="text-center mt-12 text-[9px] text-zinc-700 uppercase tracking-[0.5em]">Global Strategy Protocol • 25m Buffer Active</p>
-        </div>
-    </section>
-
-    <a href="https://wa.me/16722203696" class="fixed bottom-12 right-12 glass-bento p-6 z-50 border-white/10 hover:border-green-500 transition duration-500">
-        <i class="fab fa-whatsapp text-3xl text-green-500"></i>
+    <a href="https://wa.me/16722203696" class="fixed bottom-10 right-10 bg-green-600 p-6 rounded-full shadow-2xl z-50">
+        <i class="fab fa-whatsapp text-4xl"></i>
     </a>
 
     <script>
+        const supabase = supabase.createClient('https://jhqvdcggjmznzabblgaa.supabase.co', 'sb_publishable__VMGuh20OtT3xf-xROoWtg__bul17xmA');
+        async function book(time) {
+            const { data, error } = await supabase.from('bookings').insert([{ time_slot: time, status: 'booked' }]);
+            if (error) alert("Database Table Missing! Create 'bookings' table in Supabase SQL Editor.");
+            else alert("✅ Slot " + time + " Booked! We'll contact you on WhatsApp.");
+        }
+
+        // 3D Particles
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -98,12 +61,12 @@
         document.getElementById('canvas-container').appendChild(renderer.domElement);
         const geometry = new THREE.BufferGeometry();
         const points = [];
-        for (let i = 0; i < 9000; i++) { points.push(THREE.MathUtils.randFloatSpread(2500), THREE.MathUtils.randFloatSpread(2500), THREE.MathUtils.randFloatSpread(2500)); }
+        for (let i = 0; i < 7000; i++) { points.push(THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000)); }
         geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
-        const particles = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x444444, size: 1.5 }));
+        const particles = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x444444, size: 2 }));
         scene.add(particles);
-        camera.position.z = 1200;
-        function animate() { requestAnimationFrame(animate); particles.rotation.y += 0.0003; renderer.render(scene, camera); }
+        camera.position.z = 1000;
+        function animate() { requestAnimationFrame(animate); particles.rotation.y += 0.0005; renderer.render(scene, camera); }
         animate();
     </script>
 </body>
